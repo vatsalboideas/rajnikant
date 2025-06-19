@@ -1,0 +1,8 @@
+@use '../../../styles/imports' as *;
+.section {
+  padding: px-to-rem(150) 0;
+  p {
+    text-align: center;
+    margin-bottom: px-to-rem(45);
+  }
+}

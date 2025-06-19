@@ -1,0 +1,11 @@
+// _mixins.scss or your global SCSS file
+
+/// Convert px to rem
+/// @param {Number} $px - Pixel value to convert
+/// @param {Number} $base - Base font size (default: 16px)
+/// @return {Number} rem value
+@use 'sass:math';
+
+@function px-to-rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}

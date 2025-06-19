@@ -1,0 +1,61 @@
+.section {
+  h4 {
+    text-align: center;
+    line-height: 200%;
+  }
+  .MessageInputWrapper {
+    margin: 150px 0;
+    background: url('/text-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 10px;
+    border-radius: 50px;
+    .MessageInputInner {
+      border-radius: 40px;
+      background: #000;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .card {
+        background-image: url('/card-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        padding: 35px 15px;
+        align-items: center;
+        border: 4px solid transparent;
+        p {
+          color: #000;
+          font-size: 16px;
+          text-align: center;
+          width: 100%;
+        }
+        .imageSticker {
+          // width: 150px;
+        }
+        &:hover {
+          border-color: orange;
+        }
+      }
+      .submitButton {
+        cursor: pointer;
+        margin-top: 30px;
+        background-color: #6c0000;
+        color: #ffc300;
+        font-size: 30px;
+        padding: 10px 60px;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        &:hover {
+          background-color: darken($color: #6c0000, $amount: 5);
+        }
+      }
+    }
+  }
+}

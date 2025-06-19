@@ -1,0 +1,16 @@
+.section {
+  background-image: url('/home/quiz-section/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  aspect-ratio: 21/9;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 150px 0;
+  .logoImage {
+    scale: 1.5;
+  }
+}
