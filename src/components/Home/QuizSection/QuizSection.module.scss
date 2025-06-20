@@ -1,16 +1,56 @@
-.section {
-  background-image: url('/home/quiz-section/bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  aspect-ratio: 21/9;
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 150px 0;
-  .logoImage {
-    scale: 1.5;
+.container {
+  position: relative;
+  .section {
+    z-index: 3;
+    // background-image: url('/home/quiz-section/bg.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center center;
+    aspect-ratio: 21/9;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 0;
+    position: relative;
+    .logoImage {
+      scale: 1.5;
+    }
+  }
+  .bgimage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 21/9;
+    width: 100%;
+    height: auto;
+  }
+  .logocont {
+    z-index: 1;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    aspect-ratio: 21/9;
+    width: 100%;
+    height: auto;
+  }
+  .floating {
+    animation: float 2s ease-in-out infinite;
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
   }
 }
