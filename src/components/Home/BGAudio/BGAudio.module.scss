@@ -12,14 +12,15 @@
   padding: 1rem 2rem;
   font-size: 1.5rem;
   color: #fff;
-  background: transparent;
+  background: linear-gradient(135deg, #1e90ff, #00c9a7);
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #00c9a7, #1e90ff);
   }
 }
 .audiotag {

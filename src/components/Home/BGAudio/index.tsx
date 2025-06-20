@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from 'react';
 import styles from './BGAudio.module.scss';
-import Image from 'next/image';
 
 const BGAudio = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -24,12 +23,7 @@ const BGAudio = () => {
       {!started && (
         <div className={styles.backdrop}>
           <button className={styles.startButton} onClick={handleStart}>
-            <Image
-              src={'/play.svg'}
-              alt="play button"
-              height={150}
-              width={150}
-            />
+            Enter Site
           </button>
         </div>
       )}
