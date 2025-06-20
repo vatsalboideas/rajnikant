@@ -249,7 +249,6 @@ import img18 from '@/public/home/image-stack/18.png';
 import img19 from '@/public/home/image-stack/19.png';
 import img20 from '@/public/home/image-stack/20.png';
 import img21 from '@/public/home/image-stack/21.png';
-import { ParallaxContainer } from '../QuizSection';
 
 // array  ───────────────────────────────────────────────
 export const imageArray = [
@@ -439,9 +438,7 @@ const ImageStack = () => {
 
   return (
     <section className={styles.secondFoldCont} ref={containerRef}>
-      <ParallaxContainer
-        style={{ width: '100%', height: 'auto', aspectRatio: '21/9' }}
-      >
+      <div className={styles.imageBox}>
         {imageArray.map((imageSrc, index) => (
           <Image
             key={index}
@@ -453,9 +450,7 @@ const ImageStack = () => {
             priority={index < 5}
           />
         ))}
-      </ParallaxContainer>
-      {/* <div className={styles.imageBox}>
-      </div> */}
+      </div>
     </section>
   );
 };

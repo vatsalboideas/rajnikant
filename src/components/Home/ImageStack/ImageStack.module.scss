@@ -69,6 +69,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  .imagewrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+  }
 
   .imageBox {
     position: relative;
@@ -81,12 +87,9 @@
 
   .element {
     position: absolute;
-    top: 50%;
-    left: 15%;
-    transform: translate(
-      -50%,
-      -50%
-    ); // Keep this - GSAP will add to it, not replace it
+    top: 0%;
+    left: 15vw;
+    translate: -50%, -50%;
     z-index: 1;
     aspect-ratio: 18/11;
     object-fit: contain;

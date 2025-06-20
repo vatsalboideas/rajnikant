@@ -40,6 +40,8 @@
   }
   .floating {
     animation: float 2s ease-in-out infinite;
+    left: 0;
+    top: 0;
 
     @keyframes float {
       0% {
