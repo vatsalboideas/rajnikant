@@ -73,9 +73,9 @@ const BGAudio = () => {
         <Typography variant="h2" sx={{ fontSize: '15px' }}>
           Audio Contols :
         </Typography>
-        <button onClick={handleAudioPlay} className={styles.controlButton}>
+        {/* <button onClick={handleAudioPlay} className={styles.controlButton}>
           {audioPlay ? 'Pause' : 'Play'}
-        </button>
+        </button> */}
 
         <button onClick={handleAudioMute} className={styles.controlButton}>
           {muted ? 'Unmute' : 'Mute'}
