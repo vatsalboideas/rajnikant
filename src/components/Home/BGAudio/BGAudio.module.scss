@@ -30,8 +30,22 @@
 }
 .audioControls {
   position: fixed;
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 20px;
   z-index: 999;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .controlButton {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    cursor: pointer;
+  }
 }

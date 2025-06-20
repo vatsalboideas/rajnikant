@@ -8,6 +8,8 @@ import Image from 'next/image';
 const BGAudio = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [started, setStarted] = useState(false);
+  const [audioPlay, setAudioPlay] = useState(false);
+  const [muted, setMuted] = useState(false);
 
   const handleStart = () => {
     const audio = audioRef.current;
@@ -16,8 +18,34 @@ const BGAudio = () => {
         console.error('Play failed:', err);
       });
       setStarted(true);
+      setAudioPlay(true);
+      setMuted(false);
     }
     window.scrollTo({ top: 0 });
+  };
+
+  const handleAudioPlay = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      if (audioPlay) {
+        audio.pause();
+        setAudioPlay(false);
+      } else if (!audioPlay) {
+        audio.play();
+        setAudioPlay(true);
+      }
+      // audio.play().catch((err) => {
+      //   console.error('Play failed:', err);
+      // });
+      // setStarted(true);
+    }
+  };
+  const handleAudioMute = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.muted = !muted;
+      setMuted(!muted);
+    }
   };
 
   return (
@@ -42,9 +70,16 @@ const BGAudio = () => {
         </div>
       )}
       <div className={styles.audioControls}>
-        {/* <Typography variant="h2" style={}>
+        <Typography variant="h2" sx={{ fontSize: '15px' }}>
           Audio Contols :
-        </Typography> */}
+        </Typography>
+        <button onClick={handleAudioPlay} className={styles.controlButton}>
+          {audioPlay ? 'Pause' : 'Play'}
+        </button>
+
+        <button onClick={handleAudioMute} className={styles.controlButton}>
+          {muted ? 'Unmute' : 'Mute'}
+        </button>
       </div>
       <audio ref={audioRef} preload="auto" className={styles.audiotag}>
         <source src="/bg-intro.mp3" type="audio/mpeg" />
